@@ -1,3 +1,9 @@
 import '../../node_modules/focus-visible/dist/focus-visible';
 import '../scss/main.scss';
 import '../index.html';
+import './show-all';
+import './modal';
+import './aside';
+import './swiper';
+import "swiper/scss";
+import "swiper/scss/pagination";

@@ -1,0 +1,161 @@
+.services {
+  &__container {
+    padding: 24px 16px 0 16px;
+
+    @media (min-width: 1366px) {
+      padding: 42px 30px 0 30px;
+    }
+  }
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    color: $black;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: -0.6px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 4px;
+      height: 40px;
+      border-radius: 0 40px 40px 0;
+      background: $highlight;
+      top: 50%;
+      left: -16px;
+      transform: translateY(-50%);
+
+      @media (min-width: 1366px) {
+        left: -30px;
+      }
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 32px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    align-items: center;
+
+    @media (max-width: 1366px) {
+      display: none;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__list {
+    margin-top: 24px;
+    display: flex;
+    white-space: nowrap;
+    overflow: scroll;
+
+    @media (min-width: 1366px) {
+      overflow: visible;
+      flex-wrap: wrap;
+      padding-top: 10px;
+    }
+  }
+
+  &__item {
+		color: $grey;
+    padding: 8px 16px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    border: 2px solid transparent;
+
+    &:hover {
+      color: $pink;
+      border-radius: 6px;
+      border: 2px solid $pink;
+      background-color: $white;
+      cursor: pointer;
+      transition: border 1s, color 1s, background-color 1s;
+    }
+  }
+
+  &__item:last-child {
+    margin-right: 0;
+  }
+
+  &__item--active {
+    border-radius: 6px;
+    border: 2px solid $peppermintFrosting;
+    background: $white;
+
+		&:hover {
+			color: $grey;
+      border-radius: 6px;
+      border: 2px solid $peppermintFrosting;
+      cursor: pointer;
+		}
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 768px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 36px;
+
+      margin: 32px 24px 0 24px;
+    }
+  }
+
+  &__read-more {
+    margin-top: 16px;
+  }
+
+  &__left {
+    margin: 32px 16px 16px 16px;
+
+    @media (min-width: 768px) {
+      margin: 0;
+    }
+  }
+
+  &__right {
+    flex: 1 1 100%;
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+	&__link {
+		color: $black;
+		font-weight: 500;
+		line-height: 24px;
+		letter-spacing: -0.2px;
+	}
+
+  &__text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+  }
+
+  &__text--hidden {
+    display: none;
+
+    @media (min-width: 768px) {
+      display: block;
+      margin-top: 16px;
+    }
+  }
+}

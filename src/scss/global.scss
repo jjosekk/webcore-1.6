@@ -1,0 +1,53 @@
+body {
+  background-color: $body;
+  font-family: TT Lakes;
+}
+
+.logo {
+  position: relative;
+  max-width: 98px;
+}
+
+.button {
+  min-width: 40px;
+  min-height: 40px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: center;
+
+  @media (min-width: 1366px) {
+    display: grid;
+    grid-template-columns: 320px minmax(1000px, 1120px);
+  }
+}
+
+.title {
+	border-top: 1px solid $candiedSnow;
+  margin-top: 24px;
+  height: auto;
+  padding: 16px 32px;
+  background: linear-gradient(90deg, $body 0%, $white 100%);
+  color: $grey;
+  letter-spacing: -0.2px;
+  text-transform: uppercase;
+
+  @media (min-width: 768px) {
+    margin-top: 32px;
+  }
+
+	@media (min-width: 1366px) {
+    margin-top: 50px;
+  }
+}
+
+.block {
+	display: block;
+}

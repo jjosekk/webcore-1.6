@@ -1,0 +1,55 @@
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  &__button {
+    position: relative;
+  }
+
+  &__button::after {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 32px;
+    border-radius: 0 40px 40px 0;
+    background: transparent;
+    top: 50%;
+    left: -16px;
+    transform: translateY(-50%);
+
+    @media (min-width: 360px) {
+			left: -24px;
+		}
+  }
+
+  &__button:hover:after {
+    background: $pink;
+    transition: background-color .5s;
+  }
+
+	&__button--active {
+		position: relative;
+    color: $grey;
+	}
+
+  &__button--active:hover:after {
+    background: $highlight;
+	}
+
+  &__button--active::after {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 32px;
+    border-radius: 0 40px 40px 0;
+    background: $highlight;
+    top: 50%;
+    left: -16px;
+    transform: translateY(-50%);
+
+		@media (min-width: 360px) {
+			left: -24px;
+		}
+  }
+}

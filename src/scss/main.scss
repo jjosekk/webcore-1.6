@@ -1,18 +1,13 @@
-@import "mixins";
+@import "reset";
 @import "fonts";
-@import "vendor";
 @import "vars";
-@import "settings";
-
-
-.header {
-  text-align: center;
-  & img {
-    width: 30%;
-  }
-}
-
-.welcome-title {
-  margin-top: 50px;
-  font-size: 6em;
-}
+@import "global";
+@import "./module/menu.scss";
+@import "./module/aside.scss";
+@import "./module/modal.scss";
+@import "./module/header.scss";
+@import "./module/services.scss";
+@import "./module/repaired-brands.scss";
+@import "./module/repaired-types.scss";
+@import "./module/prices.scss";
+@import "./module/footer.scss";
